@@ -12,7 +12,20 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      transitionTimingFunction: {
+        'bounce-down': 'cubic-bezier(0.55, -0.55, 0.43, 1.45)',
+      }
     },
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      accent: '#03dfe1',
+      darkTheme: '#0F172A',
+      darkThemeModal: '#08122a',
+      white: 'white',
+      black: 'black'
+    },
+
   },
   plugins: [],
 }
