@@ -23,10 +23,10 @@ const Header = ({scrolled,mobileView}:Props) => {
 
   return (
     <header
-      className={`fixed left-0 top-0 w-full z-10 ${
-        scrolled ? "bg-opacity-60" : "bg-opacity-10"
-      } bg-darkTheme bg-clip-padding transition-all duration-1000 `}
-      style={{ backdropFilter: "blur(20px)" }}
+      className={`fixed left-0 top-0 w-full z-20 ${
+        scrolled ? "bg-blackTwo shadow-lg shadow-black" : "bg-black"
+      } bg-black transition-all duration-500 `}
+      // style={{ backdropFilter: "blur(20px)" }}
     >
       <main className="container mx-auto p-4 flex justify-between items-center w-full gap-12">
         <div className="flex justify-center items-center h-8 gap-1">
@@ -59,8 +59,8 @@ const Header = ({scrolled,mobileView}:Props) => {
         )}
         {/* Mobile Menu */}
         <div
-          className={`flex fixed z-20 flex-col sm:hidden gap-5 items-center list-none h-screen pt-24 px-4 pb-4 overflow-auto w-2/3 top-0 right-0 justify-center bg-darkThemeModal shadow-xl shadow-black transition-transform duration-500 ${
-            !showMenu ? "translate-x-full" : "translate-x-0"
+          className={`flex fixed z-20 flex-col sm:hidden gap-5 items-center list-none h-screen pt-24 px-4 pb-4 overflow-auto w-2/3 top-0 right-0 justify-center bg-blackFour shadow-2xl shadow-blackTwo transition-transform duration-500 ${
+            !showMenu ? "translate-x-[110%]" : "translate-x-0"
           }`}
         >
           <Link href="/" className={`text-lg w-full text-center ${navItemClass}`}>

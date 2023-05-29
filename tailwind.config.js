@@ -20,10 +20,12 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       accent: '#03dfe1',
-      darkTheme: '#0F172A',
-      darkThemeModal: '#08122a',
+      // accent: '#f74141',
+      black: 'black',
+      blackTwo: '#181818',
+      blackThree: '#1e1e1e',
+      blackFour: '#202020',
       white: 'white',
-      black: 'black'
     },
 
   },

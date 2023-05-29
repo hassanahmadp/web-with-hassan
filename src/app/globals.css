@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900;&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;900&display=swap'); */
 
 * {
   scroll-behavior: smooth;
@@ -21,10 +22,10 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-  /* .classsss {
-    color: #0F172A;
+  .classsss {
+    color: #262626;
     background: #08122a;
-  } */
+  }
 }
 
 

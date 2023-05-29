@@ -16,7 +16,7 @@ const AnchorButton = ({nextAnchor, additionalClass, download, link, downloadName
   const className = `${
     additionalClass ? additionalClass : ""
   } py-1 px-3 block font-medium border-accent border-2 ${
-    !inverseColors ? "text-darkTheme hover:text-accent bg-accent hover:bg-darkTheme" : "text-accent hover:text-darkTheme bg-darkTheme hover:bg-accent"
+    !inverseColors ? "text-black hover:text-accent bg-accent hover:bg-black" : "text-accent hover:text-black bg-black hover:bg-accent"
   }  transition-all duration-300`
 
   if (nextAnchor) {

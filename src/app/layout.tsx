@@ -33,15 +33,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <img
+        {/* <img
           className="fixed top-0 left-0 w-full h-auto min-h-[20rem] object-cover opacity-25"
           src="/images/background.png"
           alt=""
-        />
-        <div className="text-white bg-darkTheme" id="top">
+        /> */}
+        <div className="text-white overflow-x-hidden bg-black" id="top">
           <Header scrolled={scrolled} mobileView={mobileView} />
           {children}
-          <Footer/>
+          {/* <Footer/> */}
           <a
             href="#top"
             className={`fixed right-8 bottom-12 text-accent bg-white rounded-full shadow-md cursor-pointer z-10 h-12 w-12 flex justify-center items-center duration-[600] transition-transform ease-bounce-down ${
