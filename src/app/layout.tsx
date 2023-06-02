@@ -1,10 +1,9 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import Header from "./components/Header"
 import { FaChevronUp } from "react-icons/fa"
 import "./globals.css"
-import Footer from "./components/Footer"
+import { Footer, Header } from "@/components"
 
 export const metadata = {
   title: "Create Next App",
@@ -14,6 +13,8 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [mobileView, setMobileView] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+
+
 
   useEffect(() => {
     const windowScrollHandler = () => (window.scrollY >= 10 ? setScrolled(true) : setScrolled(false))
@@ -41,7 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="text-white overflow-x-hidden bg-black" id="top">
           <Header scrolled={scrolled} mobileView={mobileView} />
           {children}
-          {/* <Footer/> */}
+          <Footer/>
           <a
             href="#top"
             className={`fixed right-8 bottom-12 text-accent bg-white rounded-full shadow-md cursor-pointer z-10 h-12 w-12 flex justify-center items-center duration-[600] transition-transform ease-bounce-down ${

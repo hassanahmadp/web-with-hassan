@@ -8,6 +8,7 @@
 * {
   scroll-behavior: smooth;
   font-family: 'Poppins', sans-serif;
+  /* border: 0.3px solid rgb(0, 255, 0) */
 }
 
 :root {

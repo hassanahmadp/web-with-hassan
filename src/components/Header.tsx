@@ -1,25 +1,25 @@
 "use client"
 
 type Props = {
-  mobileView: boolean,
+  mobileView: boolean
   scrolled: boolean
+  // isActive: (s:string) => string
 }
 
 import { useEffect, useState } from "react"
 import CopyRight from "./CopyRight"
 import AnchorButton from "./AnchorButton"
 import Link from "next/link"
+import Logo from "./Logo"
 
-
-const Header = ({scrolled,mobileView}:Props) => {
-  const [showMenu, setShowMenu] = useState(false)
+const Header = ({ scrolled, mobileView }: Props) => {
+  const [showMenu, setShowMenu] = useState<boolean>(false)
   const year = new Date().getFullYear()
-  const navItemClass = `text-medium cursor-pointer uppercase opacity-60 hover:opacity-100 hover:text-accent`
+  const navItemClass = `text-medium cursor-pointer capitalize opacity-60 hover:opacity-100 hover:text-accent`
 
   useEffect(() => {
-    if(mobileView) setShowMenu(false)
+    if (mobileView) setShowMenu(false)
   }, [mobileView])
-  
 
   return (
     <header
@@ -36,24 +36,20 @@ const Header = ({scrolled,mobileView}:Props) => {
         {/* Desktop Menu */}
         {!mobileView && (
           <div className={`hidden sm:flex items-center list-none flex-auto gap-4`}>
-            <Link href="/"
-              className={`ml-auto text-xs ${navItemClass}`}
-            >
-              home
+            <Link onClick={()=> setShowMenu(false)} href="/" className={`ml-auto text-xs ${navItemClass}`}>
+              {"/home"}
             </Link>
-            <Link href="/" className={`text-xs ${navItemClass}`}>
-              about
+            <Link onClick={()=> setShowMenu(false)} href="/about" className={`text-xs ${navItemClass}`}>
+              {"/about"}
             </Link>
-            <Link href="/" className={`text-xs ${navItemClass}`}>
-              projects
+            <Link onClick={()=> setShowMenu(false)} href="/projects" className={`text-xs ${navItemClass}`}>
+              {"/projects"}
             </Link>
-            {/* <Link href="/" className={`text-xs ${navItemClass}`}>
+            {/* <Link onClick={()=> setShowMenu(false)} href="/" className={`text-xs ${navItemClass}`}>
               certificates
             </Link> */}
-            <Link href="/contact"
-              className={`text-xs ${navItemClass}`}
-            >
-              contact
+            <Link onClick={()=> setShowMenu(false)} href="/contact" className={`text-xs ${navItemClass}`}>
+              {"/contact"}
             </Link>
           </div>
         )}
@@ -63,27 +59,31 @@ const Header = ({scrolled,mobileView}:Props) => {
             !showMenu ? "translate-x-[110%]" : "translate-x-0"
           }`}
         >
-          <Link href="/" className={`text-lg w-full text-center ${navItemClass}`}>
-            home
+          <Link onClick={()=> setShowMenu(false)} href="/" className={`text-lg w-full text-center ${navItemClass}`}>
+            {"/home"}
           </Link>
-          <Link href="/" className={`text-lg w-full text-center ${navItemClass}`}>
-            about
+          <Link onClick={()=> setShowMenu(false)} href="/about" className={`text-lg w-full text-center ${navItemClass}`}>
+            {"/about"}
           </Link>
-          <Link href="/" className={`text-lg w-full text-center ${navItemClass}`}>
-            projects
+          <Link onClick={()=> setShowMenu(false)} href="/projects" className={`text-lg w-full text-center ${navItemClass}`}>
+            {"/projects"}
           </Link>
-          {/* <Link href="/" className={`text-lg w-full text-center ${navItemClass}`}>
+          {/* <Link onClick={()=> setShowMenu(false)} href="/" className={`text-lg w-full text-center ${navItemClass}`}>
             certificates
           </Link> */}
-          <Link href="/contact"
-            className={`text-lg w-full text-center ${navItemClass}`}
-          >
-            contact
+          <Link onClick={()=> setShowMenu(false)} href="/contact" className={`text-lg w-full text-center ${navItemClass}`}>
+            {"/contact"}
           </Link>
           <div
             className={`text-medium mt-auto flex w-full gap-4 justify-center items-center flex-col`}
           >
-            <AnchorButton download={true} additionalClass="w-full text-center" downloadName="Ahmad Hassan CV" link="/public/docs/resume 1752023.pdf" label="Download CV"/>
+            <AnchorButton
+              download={true}
+              additionalClass="w-full text-center"
+              downloadName="Ahmad Hassan CV"
+              link="/public/docs/resume 1752023.pdf"
+              label="Download CV"
+            />
             <CopyRight year={year} />
           </div>
         </div>
