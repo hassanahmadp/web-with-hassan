@@ -21,10 +21,12 @@ module.exports = {
       current: 'currentColor',
       accent: '#03dfe1',
       // accent: '#f74141',
-      black: 'black',
+      // accent: '#FBCD00',
+      black: '#272727',
       blackTwo: '#181818',
       blackThree: '#1e1e1e',
       blackFour: '#202020',
+      darkTextColor: '#B3B3B3',
       white: 'white',
     },
 

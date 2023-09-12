@@ -4,13 +4,14 @@
 import { BsLinkedin, BsGithub } from "react-icons/bs"
 import Image from "next/image"
 import { AnchorButton, ProjectsList } from "@/components"
+// import VantaContainer from "@/components/VantaContainer"
 // import { FaChevronUp } from "react-icons/fa"
 // import Overlay from "./components/Overlays/Overlay"
 
 function App() {
   return (
     <>
-      <section className="relative container mx-auto h-[100vh] min-h-[500px] pt-20 flex p-4 pb-0 flex-wrap justify-center items-center">
+      <section className="relative container mx-auto h-[100vh] min-h-[500px] py-20 flex p-4 flex-wrap justify-center items-center">
         <div className="w-1/2 flex-[1_1_30rem] h-full lg:flex hidden justify-center items-center">
           {/* <Image
             height={800}
@@ -23,9 +24,9 @@ function App() {
             <div className="borderOverlay aspect-square absolute top-0 left-0 w-[calc(100%)] scale-105 h-[calc(100%)] transition-all ease-in-out duration-500 border-accent border-b-white border-l-blackFour  z-20 rounded-full border-[1.5rem]"></div>
             <Image
               height={800}
-              className="absolute z-10 top-0 left-0 w-[calc(150%-1rem)] h-[150%] grayscale-[50%] object-cover"
+              className="absolute z-10 top-2 left-0 w-[calc(150%-1rem)] h-full object-cover"
               width={800}
-              src="/images/me with background.jpg"
+              src="/images/me with background.png"
               alt="me"
             />
           </div>
@@ -39,7 +40,7 @@ function App() {
             I&apos;m a UI / UX <span className="text-accent">Developer</span> <br />
           </h2>
           <p
-            className={`text-normal text-xs tracking-[2px] leading-6 max-w-lg mx-auto mb-5 mt-3 opacity-70 md:mx-0`}
+            className={`text-normal text-xs tracking-[2px] leading-6 max-w-lg mx-auto mb-5 mt-3 text-darkTextColor md:mx-0`}
           >
             Extremely motivated to constantly develop my skills and grow professionally. I am
             confident in my ability to develop Full-stack Websites.
@@ -61,7 +62,7 @@ function App() {
                 additionalClass="flex-[0_1_7rem] max-[425px]:flex-[0_1_30rem] text-center whitespace-nowrap"
                 download={true}
                 downloadName="Ahmad Hassan CV"
-                link="/public/docs/resume 1752023.pdf"
+                link="/public/docs/Muhammad Ahmad Hassan v0.0.2.pdf"
                 label="Download CV"
               />
               <AnchorButton

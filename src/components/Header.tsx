@@ -15,7 +15,7 @@ import Logo from "./Logo"
 const Header = ({ scrolled, mobileView }: Props) => {
   const [showMenu, setShowMenu] = useState<boolean>(false)
   const year = new Date().getFullYear()
-  const navItemClass = `text-medium cursor-pointer capitalize opacity-60 hover:opacity-100 hover:text-accent`
+  const navItemClass = `text-medium cursor-pointer opacity-60 hover:opacity-100 hover:text-accent`
 
   useEffect(() => {
     if (mobileView) setShowMenu(false)
@@ -23,9 +23,8 @@ const Header = ({ scrolled, mobileView }: Props) => {
 
   return (
     <header
-      className={`fixed left-0 top-0 w-full z-20 ${
-        scrolled ? "bg-blackTwo shadow-lg shadow-black" : "bg-black"
-      } bg-black transition-all duration-500 `}
+      className={`fixed left-0 top-0 w-full z-20 transition-all duration-500 `}
+      // scrolled ? "bg-blackTwo shadow-lg shadow-black" : "bg-black"
       // style={{ backdropFilter: "blur(20px)" }}
     >
       <main className="container mx-auto p-4 flex justify-between items-center w-full gap-12">
@@ -36,20 +35,36 @@ const Header = ({ scrolled, mobileView }: Props) => {
         {/* Desktop Menu */}
         {!mobileView && (
           <div className={`hidden sm:flex items-center list-none flex-auto gap-4`}>
-            <Link onClick={()=> setShowMenu(false)} href="/" className={`ml-auto text-xs ${navItemClass}`}>
-              {"/home"}
+            <Link
+              onClick={() => setShowMenu(false)}
+              href="/"
+              className={`ml-auto text-xs ${navItemClass}`}
+            >
+              {"./home"}
             </Link>
-            <Link onClick={()=> setShowMenu(false)} href="/about" className={`text-xs ${navItemClass}`}>
-              {"/about"}
+            <Link
+              onClick={() => setShowMenu(false)}
+              href="/about"
+              className={`text-xs ${navItemClass}`}
+            >
+              {"./about"}
             </Link>
-            <Link onClick={()=> setShowMenu(false)} href="/projects" className={`text-xs ${navItemClass}`}>
-              {"/projects"}
+            <Link
+              onClick={() => setShowMenu(false)}
+              href="/projects"
+              className={`text-xs ${navItemClass}`}
+            >
+              {"./projects"}
             </Link>
             {/* <Link onClick={()=> setShowMenu(false)} href="/" className={`text-xs ${navItemClass}`}>
               certificates
             </Link> */}
-            <Link onClick={()=> setShowMenu(false)} href="/contact" className={`text-xs ${navItemClass}`}>
-              {"/contact"}
+            <Link
+              onClick={() => setShowMenu(false)}
+              href="/contact"
+              className={`text-xs ${navItemClass}`}
+            >
+              {"./contact"}
             </Link>
           </div>
         )}
@@ -59,20 +74,36 @@ const Header = ({ scrolled, mobileView }: Props) => {
             !showMenu ? "translate-x-[110%]" : "translate-x-0"
           }`}
         >
-          <Link onClick={()=> setShowMenu(false)} href="/" className={`text-lg w-full text-center ${navItemClass}`}>
-            {"/home"}
+          <Link
+            onClick={() => setShowMenu(false)}
+            href="/"
+            className={`text-lg w-full text-center ${navItemClass}`}
+          >
+            {"./home"}
           </Link>
-          <Link onClick={()=> setShowMenu(false)} href="/about" className={`text-lg w-full text-center ${navItemClass}`}>
-            {"/about"}
+          <Link
+            onClick={() => setShowMenu(false)}
+            href="/about"
+            className={`text-lg w-full text-center ${navItemClass}`}
+          >
+            {"./about"}
           </Link>
-          <Link onClick={()=> setShowMenu(false)} href="/projects" className={`text-lg w-full text-center ${navItemClass}`}>
-            {"/projects"}
+          <Link
+            onClick={() => setShowMenu(false)}
+            href="/projects"
+            className={`text-lg w-full text-center ${navItemClass}`}
+          >
+            {"./projects"}
           </Link>
           {/* <Link onClick={()=> setShowMenu(false)} href="/" className={`text-lg w-full text-center ${navItemClass}`}>
             certificates
           </Link> */}
-          <Link onClick={()=> setShowMenu(false)} href="/contact" className={`text-lg w-full text-center ${navItemClass}`}>
-            {"/contact"}
+          <Link
+            onClick={() => setShowMenu(false)}
+            href="/contact"
+            className={`text-lg w-full text-center ${navItemClass}`}
+          >
+            {"./contact"}
           </Link>
           <div
             className={`text-medium mt-auto flex w-full gap-4 justify-center items-center flex-col`}
@@ -81,7 +112,7 @@ const Header = ({ scrolled, mobileView }: Props) => {
               download={true}
               additionalClass="w-full text-center"
               downloadName="Ahmad Hassan CV"
-              link="/public/docs/resume 1752023.pdf"
+              link="/public/docs/Muhammad Ahmad Hassan v0.0.2.pdf"
               label="Download CV"
             />
             <CopyRight year={year} />

@@ -39,6 +39,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           src="/images/background.png"
           alt=""
         /> */}
+        
+        {/* <VantaContainer className="text-white overflow-x-hidden bg-black" id="top"> */}
         <div className="text-white overflow-x-hidden bg-black" id="top">
           <Header scrolled={scrolled} mobileView={mobileView} />
           {children}
@@ -53,6 +55,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </a>
 
         </div>
+
+        {/* </VantaContainer> */}
       </body>
     </html>
   )

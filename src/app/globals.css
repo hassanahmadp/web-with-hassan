@@ -8,25 +8,8 @@
 * {
   scroll-behavior: smooth;
   font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
   /* border: 0.3px solid rgb(0, 255, 0) */
-}
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-  .classsss {
-    color: #262626;
-    background: #08122a;
-  }
 }
 
 
