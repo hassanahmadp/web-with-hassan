@@ -24,9 +24,9 @@ function App() {
             <div className="borderOverlay aspect-square absolute top-0 left-0 w-[calc(100%)] scale-105 h-[calc(100%)] transition-all ease-in-out duration-500 border-accent border-b-white border-l-blackFour  z-20 rounded-full border-[1.5rem]"></div>
             <Image
               height={800}
-              className="absolute z-10 top-2 left-0 w-[calc(150%-1rem)] h-full object-cover"
+              className="absolute z-10 top-6 left-0 w-[calc(150%-1rem)] scale-110 h-full object-cover"
               width={800}
-              src="/images/me with background.png"
+              src="/images/me with bg.jpg"
               alt="me"
             />
           </div>
